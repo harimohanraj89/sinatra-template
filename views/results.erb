@@ -1,0 +1,11 @@
+<ul id="home-titles-list">
+	<% @movies.each do |movie| %>
+		<% if movie['Type'] == 'movie' %>
+			<li>
+				<a href="/movies/?id=<%= movie['imdbID'] %>">
+					<%= movie['Title'] %> (<%= movie['Year'] %>)
+				</a>
+			</li>
+		<% end %>
+	<% end %>
+</ul>
